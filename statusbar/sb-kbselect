@@ -1,0 +1,12 @@
+#!/bin/fish
+# works on any init system
+# requirements: dmenu, xorg-setxkbmap
+
+switch (xset -q | grep LED | awk '{ print $10 }')
+case 00001000
+  echo ✠
+case 00000000
+  echo 🍵
+case '*'
+  echo 
+end

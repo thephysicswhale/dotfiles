@@ -1,0 +1,6 @@
+#!/bin/sh
+
+root="$(df -h / | awk ' /[0-9]/ {print $5}')"
+home="$(df -h /home | awk ' /[0-9]/ {print $5}')"
+
+echo "🜃 $home  🜐 $root" 
